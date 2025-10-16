@@ -1,20 +1,21 @@
-# 🧠 AI-Driven Loan Status Prediction System
+# 🚀 AI-Driven Loan Status Prediction System
 
-## 📘 Description du projet
+## Description du projet
 Ce projet vise à prédire le **statut d’un prêt bancaire (accepté ou refusé)** à partir de données clients à l’aide de **techniques de Machine Learning**.  
-L’objectif est de construire un **système d’aide à la décision bancaire** capable d’évaluer le risque de chaque demande et de fournir un **score de confiance** associé à chaque prédiction.
+L’objectif est de construire un **système d’aide à la décision bancaire** capable d’évaluer le risque de chaque demande et de fournir un **score de confiance (Risk_score)** associé à chaque prédiction.
 
-Le modèle repose sur un **SVM (Support Vector Machine)** avec un **kernel RBF**, choisi pour sa robustesse face aux données non linéaires et déséquilibrées.
+Étant donné que les données ne sont pas volumineuses, le modèle repose sur un **SVM (Support Vector Machine)** avec un **kernel RBF**, choisi pour sa robustesse face aux données non linéaires et déséquilibrées et pour éviter également le biais ou le surapprentissage.
 
 Ce projet combine :
 - 📊 **Analyse exploratoire** et détection d’anomalies (EDA)
-- ⚙️ **Prétraitement intelligent** (nettoyage, encodage, normalisation)
+- ⚙️ **Prétraitement avec Python(scikit-learn, pandas, numpy...)** (nettoyage, encodage, normalisation)
 - 🤖 **Apprentissage automatique supervisé (SVM)**
-- 💡 **Analyse IA et reporting interactif sous Power BI**
+- 📊 **Visualisation de l'hyperplan séparant les 2 classes**
+- 💡 **Analyse IA et reporting interactif sous Power BI(DAX)**
 
 ---
 
-## 🧩 Structure du code
+## Structure du code
 
 ### 1. **Importation et analyse initiale**
 - Lecture du dataset `loan_status.csv`
@@ -86,7 +87,7 @@ Une fois le fichier `LoanStatus.csv` importé dans Power BI :
 
 ---
 
-## 🧮 Scores de performance (exemple)
+## Scores de performance (exemple)
 
 | Metric | Value |
 |---------|--------|
@@ -98,7 +99,7 @@ Une fois le fichier `LoanStatus.csv` importé dans Power BI :
 | AUC | 0.85 |
 
 
-## 🧠 Technologies utilisées
+## Technologies utilisées
 - **Python 3.11+**
 - **Pandas / NumPy / Matplotlib**
 - **Scikit-learn**
@@ -107,16 +108,9 @@ Une fois le fichier `LoanStatus.csv` importé dans Power BI :
 
 ---
 
-## 🚀 Perspectives d’amélioration
-- Intégration d’un **modèle hybride** (SVM + RandomForest ou XGBoost)
-- Ajout d’un module d’**explainability (SHAP)** pour interpréter les décisions du modèle
-- Automatisation via un pipeline MLOps (CI/CD)
-- Connexion temps réel à une base SQL pour scoring en production
-
----
 
 ## 🏆 Auteur
-**Nom :** [Youness EL OUERYAGHELY]  
+**Nom :** Youness EL OUERYAGHELY 
 **Spécialité :** Data & Information Systems Engineering  
 **Projet académique :** AI-Driven Loan Risk & Acceptance Prediction  
 **Année :** 2025  
@@ -134,7 +128,7 @@ Une fois le fichier `LoanStatus.csv` importé dans Power BI :
 
 ---
 
-## 🧾 Exemple de ligne exportée :
+## Exemple de ligne exportée :
 | Loan_ID | Gender | Married | ApplicantIncome | LoanAmount | Loan_Status | Loan_Status_predict | Risk_Score |
 |----------|--------|----------|-----------------|-------------|--------------|---------------------|-------------|
 | LP001002 | Male | Yes | 5849 | 146 | Y | 1 | 0.92 |
